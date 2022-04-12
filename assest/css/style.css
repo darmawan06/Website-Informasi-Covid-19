@@ -1,0 +1,317 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--primary-color : #038cfc;	
+	--secondary-color : #1a9fab;	
+}
+
+main{
+	padding: 20px;
+	position: relative;
+}
+header-custom.sticky{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+header-custom div{
+	width: 100%;
+	background-color: white;
+	display: flex;
+	padding: 10px;
+	box-shadow: 0px 5px 3px whitesmoke;
+	margin-bottom: 10px;
+}
+
+header-custom div h3{
+	font-size: 2em;
+	width: auto;
+	margin: auto;
+	margin-left: 0;
+	padding: 10px;
+	color : black;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+header-custom div section#search{
+	width: auto;
+	margin-left: auto;
+	display: flex;
+}
+header-custom div section#search i{
+	margin: auto;
+	font-size: 1.5em;
+	color: var(--primary-color);
+}
+header-custom div section#search section#autocomplete{
+	width: 100%;
+	padding: 5px;
+	display: flex;
+	position: relative;
+}
+header-custom div section#search section#autocomplete input{
+	margin: auto;
+	border-radius: 10px;
+	height: 70%;
+	margin-left: 5px;
+	outline: none;
+	border: 2px solid var(--primary-color);
+}
+header-custom div section#search section#autocomplete ul{
+	position: absolute;
+	right: 0px;
+	display: none;
+	top: 50px;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	overflow-y: auto;
+	list-style: none;
+	max-height: 20em;
+	background-color: rgba(3, 140, 252, 0.9);
+	z-index: 10;
+	overflow-x: hidden;
+	padding: 10px;
+}
+header-custom div section#search section#autocomplete ul.active{
+	display: flex;
+}
+header-custom div section#search section#autocomplete ul a{
+	margin: 5px;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 5px;
+}
+header-custom div section#search section#autocomplete ul a:hover{
+	color: var(--primary-color);
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+header-custom div section#infoCountries{
+	margin: auto;
+}
+header-custom div section#infoCountries span{
+	margin: 10px;
+}
+header-custom div section#infoCountries span:nth-child(1){
+	color: var(--primary-color);
+}
+header-custom div section#infoCountries span:nth-child(2){
+	color: yellowgreen;
+}
+header-custom div section#infoCountries span:nth-child(3){
+	color: lightgreen;
+}
+header-custom div section#infoCountries span:nth-child(4){
+	color: red;
+}
+home-custom div{
+	display: flex;
+	margin-bottom: 50px;
+}
+home-custom section{
+	width: 50%;
+	padding: 10px;
+	margin: auto;
+}
+home-custom section h1{
+	font-size: 4em;
+	color: var(--primary-color);
+}
+home-custom section h1 p{
+	font-size: 0.5em;
+	color: black;
+}
+home-custom div img{
+ 	width: 50%;
+ 	z-index: -10px;
+ 	margin: auto;
+}
+
+home-custom section h4{
+	text-align: justify;
+	margin-top: 10px;
+}
+
+countries-covid section{
+	width: 100%;
+	height: 80vh;
+	max-height: 100vh;
+}
+
+countries-covid section nav{
+	display: flex;
+}
+countries-covid section h3{
+	text-align: center;
+}
+countries-covid section nav a{
+	display: flex;
+	text-decoration: none;
+	border-style: solid;
+	margin: 5px;
+	height: 5vh;
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+	border-radius: 10px;
+}
+
+countries-covid section nav a:hover{
+	background-color: var(--primary-color);
+	color: white;
+}
+
+
+countries-covid section nav a i {
+	margin: auto 10px;
+}
+countries-covid section nav a input[type="text"]{
+	height: 100%;
+	border-radius: 10px;
+	border: none;
+
+}
+countries-covid section nav a input[type="text"]:focus{
+	border: 3px solid var(--primary-color);
+	outline: none;
+
+}
+countries-covid section div#item-province{
+	width: 100%;
+	max-height: 100%;
+	overflow-y: auto;
+	flex-wrap: wrap;
+	display: flex;
+	background-color: white;
+}
+countries-covid section div#item-province loader-custom{
+	margin: auto;
+	padding: 30px;
+}
+countries-covid section div#item-province province-custom{
+	box-shadow: 0px 4px 5px whitesmoke;
+	width: 30%;
+	height: auto;
+	margin: 5px auto;
+	display: flex;
+	border-radius: 5px;
+	flex-direction: column;
+	padding: 10px;
+}
+countries-covid section div#item-province province-custom:hover{
+	background-color: var(--primary-color);
+	box-shadow: 0px 4px 5px var(--primary-color);
+	color: white;
+}
+countries-covid section div#item-province province-custom label{
+	font-size: 1.5em;
+}
+countries-covid section div#item-province province-custom div{
+	display: flex;
+	flex-direction: column;
+}
+countries-covid section div#item-province province-custom div div{
+	margin: 5px;
+	width: 100%;
+	height: auto;
+	padding: 2px;
+	text-align: center;
+}
+
+countries-covid section div#item-province province-custom div div.bar-confirmed{
+	background-color: yellowgreen;
+}
+
+countries-covid section div#item-province province-custom div div.bar-active{
+	background-color: lightgreen;
+}
+
+countries-covid section div#item-province province-custom div div.bar-deaths{
+	background-color: red;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  header-custom div{
+  	flex-direction: column;
+  }
+  header-custom div h3{
+  	font-size: 3vw;
+  }
+  header-custom div section#infoCountries{
+  	flex-direction: row;
+  }
+  header-custom div section#infoCountries span{
+  	font-size: 1.6vw;
+  }
+  header-custom div section#search{
+  	margin: 0;
+  }
+  header-custom div section#search i{
+  	font-size: 4vw;
+  }
+  header-custom div section#search section#autocomplete input{
+  	width: 100%;
+  	border-radius: 0;
+  	height: 20px;
+  	padding: 10px;
+  }
+
+  home-custom div{
+  	flex-direction: column-reverse;
+  }
+  home-custom section{
+  	width: 100%;
+  }
+  home-custom section h1{
+  	font-size: 6vw;
+  }
+  home-custom section h1 p{
+  	font-size: 5vw;
+  }
+  home-custom section h4{
+  	font-size: 3vw;
+  }
+  home-custom div img{
+  	width: 100%;
+  }
+  countries-covid section nav a{
+  	width: 100%;
+  	height: 30px;
+  	border-radius: 0;
+  }
+  countries-covid section nav a input[type="text"]{
+  	width: 100%;
+  	border-radius: 0;
+  }
+  countries-covid section div#item-province{
+  	flex-direction: row;
+  	font-size: 2vw;
+  }
+  countries-covid section div#item-province province-custom label{
+  	margin-bottom: auto;
+  	text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  header-custom div{
+  }
+  header-custom div h3{
+  	font-size: 2vw;
+  }
+  header-custom div section#infoCountries{
+  }
+  header-custom div section#infoCountries span{
+  	font-size: 1vw;
+  }
+}
